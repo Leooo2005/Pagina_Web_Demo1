@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú | Bite & Vibe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="fondo-menu">
+
+    <header>
+        <div class="logo">Bite & Vibe 🍔</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="navMenu">
+            <a href="index.html">Inicio</a>
+            <a href="menu.html" style="border-bottom: 2px solid var(--acento);">Menú</a>
+            <a href="contactos.html">Contactos</a>
+        </nav>
+    </header>
+
+    <section class="contenedor-menu">
+        <h2 class="titulo-menu">Nuestro Menú Especial</h2>
+        
+        <div class="grilla-productos">
+            <div class="tarjeta-producto">
+                <img src="assents/img/hamburguesa.jpg" alt="Hamburguesa">
+                <h3>Hamburguesa Doble Smash</h3>
+                <p class="precio">$6.50</p>
+                <button class="boton-elegante" onclick="abrirModal('Hamburguesa Doble Smash', '6.50', 'assents/img/hamburguesa.jpg', 'Doble carne smash, queso cheddar, tocino crujiente y salsa secreta.')">Ver Detalles</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="assents/img/pizza.jpg" alt="Pizza">
+                <h3>Pizza Pepperoni</h3>
+                <p class="precio">$12.00</p>
+                <button class="boton-elegante" onclick="abrirModal('Pizza Pepperoni', '12.00', 'assents/img/pizza.jpg', 'Masa artesanal, salsa pomodoro, extra mozzarella y pepperoni premium.')">Ver Detalles</button>
+            </div>
+            
+            <div class="tarjeta-producto">
+                <img src="assents/img/hamburguesa.jpg" alt="Hamburguesa">
+                <h3>Hamburguesa Doble Smash</h3>
+                <p class="precio">$6.50</p>
+                <button class="boton-elegante" onclick="abrirModal('Hamburguesa Doble Smash', '6.50', 'assents/img/hamburguesa.jpg', 'Doble carne smash, doble queso cheddar derretido, tocino crujiente y nuestra salsa secreta de la casa.')">Ver Detalles</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="assents/img/pizza.jpg" alt="Pizza">
+                <h3>Pizza Pepperoni</h3>
+                <p class="precio">$12.00</p>
+                <button class="boton-elegante" onclick="abrirModal('Pizza Pepperoni', '12.00', 'assents/img/pizza.jpg', 'Masa artesanal horneada a la piedra, salsa pomodoro, extra queso mozzarella y pepperoni premium.')">Ver Detalles</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="assents/img/salchipapa.jpg" alt="Salchipapa">
+                <h3>Salchipapa Extrema</h3>
+                <p class="precio">$4.00</p>
+                <button class="boton-elegante" onclick="abrirModal('Salchipapa Extrema', '4.00', 'assents/img/salchipapa.jpg', 'Cama de papas rústicas, salchicha premium picada, queso fundido, lluvia de tocino y salsas a elección.')">Ver Detalles</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="assents/img/alitas.jpg" alt="Alitas">
+                <h3>Alitas BBQ (6 uds)</h3>
+                <p class="precio">$5.50</p>
+                <button class="boton-elegante" onclick="abrirModal('Alitas BBQ', '5.50', 'assents/img/alitas.jpg', 'Seis alitas súper crujientes bañadas en nuestra salsa BBQ artesanal, acompañadas de papas fritas.')">Ver Detalles</button>
+            </div>
+        </div>
+            
+            </div>
+    </section>
+
+    <div id="modalProducto" class="modal-oculto">
+        <div class="contenido-modal">
+            <span class="cerrar-modal" onclick="cerrarModal()">✖</span>
+            <img id="modalImagen" src="" alt="Producto">
+            <h2 id="modalTitulo">Nombre</h2>
+            <p id="modalDescripcion">Descripción...</p>
+            <h3 id="modalPrecio">$0.00</h3>
+            
+            <a id="botonWhatsapp" href="#" target="_blank" class="boton-whatsapp">
+                Pedir por WhatsApp 💬
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
