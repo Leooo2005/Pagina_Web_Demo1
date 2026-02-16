@@ -102,11 +102,11 @@ nav a.activo {
 }
 
 .fondo-1 {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assents/img/portada.jpg.JPG'); /* Reemplazar con tu ruta */
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assents/img/portada.JPG'); /* Reemplazar con tu ruta */
 }
 
 .fondo-2 {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assents/img/Pizza_porte.jpg'); /* Reemplazar con tu ruta */
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assents/img/portada_1.jpg'); /* Reemplazar con tu ruta */
 }
 
 /* Títulos Parallax estilo Franquicia */
