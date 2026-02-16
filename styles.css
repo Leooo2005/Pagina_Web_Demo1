@@ -1,8 +1,9 @@
-/* --- VARIABLES DE COLORES ELEEGANTES --- */
+/* --- VARIABLES ESTILO FAST FOOD COMERCIAL --- */
 :root {
-    --fondo-claro: #FDFBF7; /* Un color crema muy suave, casi blanco */
-    --texto-oscuro: #2C3E50; /* Gris muy oscuro, más elegante que el negro puro */
-    --acento: #D35400; /* Un naranja quemado/dorado para abrir el apetito */
+    --fondo-claro: #F4F4F4; /* Gris muy claro para resaltar el contenido */
+    --texto-oscuro: #1A1A1A; /* Casi negro para máximo contraste */
+    --acento: #E63946; /* Rojo apetitoso e impulsivo */
+    --secundario: #FFCA28; /* Amarillo mostaza */
 }
 
 /* --- RESET BÁSICO --- */
@@ -10,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -18,46 +19,66 @@ body {
     color: var(--texto-oscuro);
 }
 
-/* ---NAVEGACIÓN ---*/
+/* --- NAVEGACIÓN ---*/
 header {
     background-color: white;
-    padding: 20px 5%;
+    padding: 15px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra muy suave */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
-    z-index: 100; /* Para que el menú siempre esté por encima de las fotos */
+    z-index: 100;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: 900;
     color: var(--acento);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav a {
     text-decoration: none;
     color: var(--texto-oscuro);
     margin-left: 20px;
-    font-weight: 500;
+    font-weight: 700;
     transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 0.95rem;
 }
 
-nav a:hover {
+nav a:hover, nav a.activo {
     color: var(--acento);
 }
 
-/* --- EFECTO ZOOM SCROLL (Estilo "Boxed" o Cuadro Elegante) --- */
+nav a.activo {
+    border-bottom: 3px solid var(--acento);
+}
+
+.btn-menu-nav {
+    margin-left: 20px !important;
+    padding: 8px 20px !important;
+    font-size: 0.9rem !important;
+    border-bottom: none !important;
+}
+
+/* --- EFECTO ZOOM SCROLL --- */
 .contenedor-zoom {
     position: relative; 
-    height: 60vh; /* Altura del cuadro */
-    width: 90%; /* En celulares dejará un pequeño borde a los lados */
-    max-width: 1000px; /* En PC, el cuadro nunca pasará de este tamaño */
-    margin: 40px auto; /* Centra el cuadro en la pantalla y le da espacio arriba y abajo */
-    border-radius: 20px; /* Bordes redondeados súper elegantes */
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2); /* Sombra para que flote sobre el fondo */
+    height: 60vh; 
+    width: 95%; 
+    max-width: 1000px; 
+    margin: 40px auto; 
+    border-radius: 20px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3); 
     overflow: hidden; 
     display: flex;
     justify-content: center;
@@ -65,7 +86,6 @@ nav a:hover {
     text-align: center;
 }
 
-/* CAPA DE ABAJO: La imagen de fondo con Zoom Automático */
 .imagen-zoom-fondo {
     position: absolute; 
     top: 0; left: 0;
@@ -73,44 +93,51 @@ nav a:hover {
     background-size: cover; 
     background-position: center center; 
     z-index: -1; 
-    
-    /* ESTA ES LA MAGIA CINEMÁTICA: Una animación de 20 segundos que va y viene */
     animation: zoomCinematico 20s infinite alternate linear;
 }
 
-/* Las instrucciones de la animación */
 @keyframes zoomCinematico {
-    0% {
-        transform: scale(1); /* Empieza en tamaño normal */
-    }
-    100% {
-        transform: scale(1.15); /* Crece solo un 15% súper lento */
-    }
+    0% { transform: scale(1); }
+    100% { transform: scale(1.15); }
 }
 
-.texto-parallax {
-    position: relative;
-    z-index: 1; 
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
-}
-
-/* Reemplaza estas rutas con los nombres de las fotos que descargastes */
 .fondo-1 {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assents/img/portada_pizza.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assents/img/portada.jpg.JPG'); /* Reemplazar con tu ruta */
 }
 
 .fondo-2 {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assents/img/Pizza_porte.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assents/img/Pizza_porte.jpg'); /* Reemplazar con tu ruta */
 }
 
+/* Títulos Parallax estilo Franquicia */
 .texto-parallax {
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    position: relative;
+    z-index: 1; 
+    padding: 20px;
 }
 
-.texto-parallax h1 { font-size: 3rem; margin-bottom: 10px; }
-.texto-parallax h2 { font-size: 2.5rem; }
+.texto-parallax h1 { 
+    font-size: 4.5rem; 
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--secundario); 
+    -webkit-text-stroke: 2px #1A1A1A; /* Borde negro */
+    text-shadow: 4px 4px 0px #1A1A1A; /* Sombra dura de cómic/fast food */
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.texto-parallax p, .texto-parallax h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    background-color: var(--acento);
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0px #1A1A1A;
+}
 
 /* --- SECCIONES CLARAS --- */ 
 .seccion-clara {
@@ -120,9 +147,11 @@ nav a:hover {
 }
 
 .seccion-clara h2 {
-    color: var(--acento);
+    color: var(--texto-oscuro);
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 .seccion-clara p {
@@ -130,23 +159,30 @@ nav a:hover {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
+    font-weight: 500;
 }
 
-/* --- BOTÓN ELEGANTE --- */
+/* --- BOTÓN FAST FOOD --- */
 .boton-elegante {
     display: inline-block;
     background-color: var(--acento);
-    color: white;
+    color: white !important;
     padding: 12px 30px;
     text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: 0.3s;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase; 
+    box-shadow: 0 6px 15px rgba(230, 57, 70, 0.4); 
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .boton-elegante:hover {
-    background-color: #A04000;
-    transform: scale(1.05);
+    background-color: #D62828;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(230, 57, 70, 0.6);
 }
 
 /* --- FOOTER --- */
@@ -154,15 +190,16 @@ footer {
     background-color: var(--texto-oscuro);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+    font-weight: 500;
 }
 
-/* --- MENÚ MÓVIL (Tu código de siempre) --- */
+/* --- MENÚ MÓVIL --- */
 .menu-toggle {
     display: none;
     font-size: 28px;
     cursor: pointer;
-    color: var(--acento);
+    color: var(--texto-oscuro);
 }
 
 @media (max-width: 768px) {
@@ -175,21 +212,26 @@ footer {
         text-align: center;
         margin-top: 15px;
         background-color: white;
+        padding-bottom: 15px;
     }
-    nav a { margin: 10px 0; padding: 10px; }
+    nav a { margin: 10px 0; padding: 10px; border-bottom: none !important; }
     nav.active { display: flex !important; }
-    .texto-parallax h1 { font-size: 2rem; }
+    .texto-parallax h1 { font-size: 3rem; -webkit-text-stroke: 1px #1A1A1A; }
+    .btn-menu-nav { margin: 10px auto !important; width: 80%; }
 }
 
-/* --- AJUSTE EXCLUSIVO PARA PANTALLAS GRANDES (PC) --- */
+/* --- AJUSTE EXCLUSIVO PARA PC (Imagen completa en el cuadro) --- */
 @media (min-width: 768px) {
     .contenedor-zoom {
-        height: 70vh; /* Una altura muy elegante para PC */
+        height: 55vh; 
+        max-width: 900px; 
+        background-color: #111; /* Fondo oscuro por si la imagen no cubre todo el ancho */
     }
     
     .imagen-zoom-fondo {
-        background-size: cover; /* ¡Ahora sí podemos usar cover porque la foto es ancha! */
+        background-size: contain; /* Esto hace que la imagen se vea completa sin cortarse */
         background-position: center center;
+        background-repeat: no-repeat;
     }
 }
 
@@ -206,51 +248,62 @@ footer {
 
 .titulo-menu {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--texto-oscuro);
     margin-bottom: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
-/* Grilla inteligente: se acomoda sola en PC o Celular */
 .grilla-productos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    align-items: start; /* Mantiene todas las tarjetas ordenadas desde arriba */
+    align-items: start;
 }
 
 .tarjeta-producto {
     background: white;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
     transition: transform 0.3s;
+    border: 3px solid transparent;
 }
 
-.tarjeta-producto:hover { transform: translateY(-10px); }
+.tarjeta-producto:hover { 
+    transform: translateY(-10px); 
+    border: 3px solid var(--secundario);
+}
 
 .tarjeta-producto img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-bottom: 15px;
 }
 
+.tarjeta-producto h3 {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--texto-oscuro);
+}
+
 .precio {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--acento);
-    font-weight: bold;
+    font-weight: 900;
     margin: 10px 0;
 }
 
 /* --- LA VENTANA EMERGENTE (MODAL) --- */
 .modal-oculto {
-    display: none; /* Escondido hasta que le den clic */
+    display: none; 
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.8); /* Fondo negro transparente */
+    background-color: rgba(0,0,0,0.85); 
     z-index: 1000;
     justify-content: center;
     align-items: center;
@@ -262,19 +315,24 @@ footer {
     background: white;
     padding: 30px;
     border-radius: 20px;
-    max-width: 400px;
+    max-width: 450px;
     width: 90%;
     text-align: center;
     position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
 }
 
 .contenido-modal img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-bottom: 15px;
 }
+
+#modalTitulo { font-weight: 900; font-size: 1.8rem; text-transform: uppercase; }
+#modalPrecio { font-size: 2.2rem; color: var(--acento); font-weight: 900; margin: 10px 0; }
+#modalDescripcion { font-weight: 500; color: #555; }
 
 .cerrar-modal {
     position: absolute;
@@ -282,22 +340,31 @@ footer {
     font-size: 28px;
     cursor: pointer;
     color: #888;
+    transition: 0.3s;
 }
+
+.cerrar-modal:hover { color: var(--acento); }
 
 .boton-whatsapp {
     display: block;
     background-color: #25D366;
     color: white;
     padding: 15px;
-    border-radius: 25px;
+    border-radius: 50px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 800;
     margin-top: 20px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
     transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
 }
 
-.boton-whatsapp:hover { background-color: #1EBE55; transform: scale(1.05); }
+.boton-whatsapp:hover { 
+    background-color: #1EBE55; 
+    transform: scale(1.05); 
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
 
 /* =========================================
    DISEÑO DE LA PÁGINA DE CONTACTOS
@@ -315,17 +382,15 @@ footer {
     align-items: start;
 }
 
-.info-contacto {
-    text-align: left; /* Alineamos el texto a la izquierda para que sea fácil de leer */
-}
+.info-contacto { text-align: left; }
 
 .info-contacto p {
     font-size: 1.1rem;
     margin: 15px 0;
     color: var(--texto-oscuro);
+    font-weight: 500;
 }
 
-/* --- LOGOS DE REDES SOCIALES --- */
 .redes-sociales {
     display: flex;
     gap: 20px;
@@ -333,16 +398,13 @@ footer {
 }
 
 .redes-sociales a {
-    font-size: 35px; /* Tamaño del logo */
+    font-size: 40px; 
     text-decoration: none;
     transition: transform 0.3s;
 }
 
-.redes-sociales a:hover {
-    transform: scale(1.2); /* Efecto de que saltan al pasar el mouse */
-}
+.redes-sociales a:hover { transform: scale(1.15) translateY(-5px); }
 
-/* Colores originales de las marcas */
 .icono-fb { color: #1877F2; }
 .icono-ig { color: #E1306C; }
 .icono-tk { color: #000000; }
