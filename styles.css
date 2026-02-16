@@ -1,9 +1,9 @@
-/* --- VARIABLES ESTILO FAST FOOD COMERCIAL --- */
+/* --- VARIABLES ESTILO FAST FOOD RECONOCIDO --- */
 :root {
-    --fondo-claro: #F4F4F4; /* Gris muy claro para resaltar el contenido */
+    --fondo-claro: #F4F4F4; /* Gris muy claro para que resalten las tarjetas */
     --texto-oscuro: #1A1A1A; /* Casi negro para máximo contraste */
-    --acento: #E63946; /* Rojo apetitoso e impulsivo */
-    --secundario: #FFCA28; /* Amarillo mostaza */
+    --acento: #E63946; /* Rojo apetitoso e impulsivo (Estilo KFC/McDonalds) */
+    --secundario: #FFCA28; /* Amarillo mostaza para detalles */
 }
 
 /* --- RESET BÁSICO --- */
@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y gruesa agregada aquí */
 }
 
 body {
@@ -19,17 +19,17 @@ body {
     color: var(--texto-oscuro);
 }
 
-/* --- NAVEGACIÓN ---*/
+/* ---NAVEGACIÓN ---*/
 header {
     background-color: white;
-    padding: 15px 5%;
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 100; 
 }
 
 .logo {
@@ -37,12 +37,6 @@ header {
     font-weight: 900;
     color: var(--acento);
     text-transform: uppercase;
-    letter-spacing: -1px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
 }
 
 nav a {
@@ -52,33 +46,21 @@ nav a {
     font-weight: 700;
     transition: 0.3s;
     text-transform: uppercase;
-    font-size: 0.95rem;
 }
 
-nav a:hover, nav a.activo {
+nav a:hover {
     color: var(--acento);
 }
 
-nav a.activo {
-    border-bottom: 3px solid var(--acento);
-}
-
-.btn-menu-nav {
-    margin-left: 20px !important;
-    padding: 8px 20px !important;
-    font-size: 0.9rem !important;
-    border-bottom: none !important;
-}
-
-/* --- EFECTO ZOOM SCROLL --- */
+/* --- EFECTO ZOOM SCROLL (Tu código original intacto) --- */
 .contenedor-zoom {
     position: relative; 
     height: 60vh; 
-    width: 95%; 
+    width: 90%; 
     max-width: 1000px; 
     margin: 40px auto; 
     border-radius: 20px; 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3); 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
     overflow: hidden; 
     display: flex;
     justify-content: center;
@@ -101,42 +83,36 @@ nav a.activo {
     100% { transform: scale(1.15); }
 }
 
-.fondo-1 {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assents/img/portada.JPG'); /* Reemplazar con tu ruta */
-}
-
-.fondo-2 {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assents/img/portada_1.jpg'); /* Reemplazar con tu ruta */
-}
-
-/* Títulos Parallax estilo Franquicia */
 .texto-parallax {
     position: relative;
     z-index: 1; 
-    padding: 20px;
-}
-
-.texto-parallax h1 { 
-    font-size: 4.5rem; 
-    font-weight: 900;
-    text-transform: uppercase;
-    color: var(--secundario); 
-    -webkit-text-stroke: 2px #1A1A1A; /* Borde negro */
-    text-shadow: 4px 4px 0px #1A1A1A; /* Sombra dura de cómic/fast food */
-    margin-bottom: 10px;
-    line-height: 1.1;
-}
-
-.texto-parallax p, .texto-parallax h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
     color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+}
+
+/* Títulos más grandes estilo Fast Food */
+.texto-parallax h1 { 
+    font-size: 4rem; 
+    font-weight: 900;
+    margin-bottom: 10px; 
+    color: var(--secundario);
+    text-transform: uppercase;
+    -webkit-text-stroke: 1.5px #1A1A1A;
+}
+
+.texto-parallax h2 { 
+    font-size: 2.5rem; 
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.texto-parallax p {
+    font-size: 1.3rem;
+    font-weight: 700;
     background-color: var(--acento);
     display: inline-block;
-    padding: 5px 20px;
+    padding: 5px 15px;
     border-radius: 10px;
-    text-transform: uppercase;
-    box-shadow: 3px 3px 0px #1A1A1A;
 }
 
 /* --- SECCIONES CLARAS --- */ 
@@ -147,7 +123,7 @@ nav a.activo {
 }
 
 .seccion-clara h2 {
-    color: var(--texto-oscuro);
+    color: var(--acento);
     margin-bottom: 20px;
     font-size: 2.5rem;
     font-weight: 900;
@@ -162,18 +138,18 @@ nav a.activo {
     font-weight: 500;
 }
 
-/* --- BOTÓN FAST FOOD --- */
+/* --- BOTÓN FAST FOOD AGRESIVO --- */
 .boton-elegante {
     display: inline-block;
     background-color: var(--acento);
-    color: white !important;
+    color: white;
     padding: 12px 30px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 800;
     font-size: 1.1rem;
-    text-transform: uppercase; 
-    box-shadow: 0 6px 15px rgba(230, 57, 70, 0.4); 
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
@@ -182,7 +158,7 @@ nav a.activo {
 .boton-elegante:hover {
     background-color: #D62828;
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(230, 57, 70, 0.6);
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.6);
 }
 
 /* --- FOOTER --- */
@@ -190,16 +166,15 @@ footer {
     background-color: var(--texto-oscuro);
     color: white;
     text-align: center;
-    padding: 25px;
-    font-weight: 500;
+    padding: 20px;
 }
 
-/* --- MENÚ MÓVIL --- */
+/* --- MENÚ MÓVIL (Tu código original) --- */
 .menu-toggle {
     display: none;
     font-size: 28px;
     cursor: pointer;
-    color: var(--texto-oscuro);
+    color: var(--acento);
 }
 
 @media (max-width: 768px) {
@@ -212,26 +187,18 @@ footer {
         text-align: center;
         margin-top: 15px;
         background-color: white;
-        padding-bottom: 15px;
     }
     nav a { margin: 10px 0; padding: 10px; border-bottom: none !important; }
     nav.active { display: flex !important; }
-    .texto-parallax h1 { font-size: 3rem; -webkit-text-stroke: 1px #1A1A1A; }
-    .btn-menu-nav { margin: 10px auto !important; width: 80%; }
+    .texto-parallax h1 { font-size: 2.5rem; }
 }
 
-/* --- AJUSTE EXCLUSIVO PARA PC (Imagen completa en el cuadro) --- */
+/* --- AJUSTE EXCLUSIVO PARA PC (Tu código original) --- */
 @media (min-width: 768px) {
-    .contenedor-zoom {
-        height: 55vh; 
-        max-width: 900px; 
-        background-color: #111; /* Fondo oscuro por si la imagen no cubre todo el ancho */
-    }
-    
+    .contenedor-zoom { height: 70vh; }
     .imagen-zoom-fondo {
-        background-size: contain; /* Esto hace que la imagen se vea completa sin cortarse */
+        background-size: cover; 
         background-position: center center;
-        background-repeat: no-repeat;
     }
 }
 
@@ -259,40 +226,39 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    align-items: start;
+    align-items: start; 
 }
 
 .tarjeta-producto {
     background: white;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
 }
 
 .tarjeta-producto:hover { 
     transform: translateY(-10px); 
-    border: 3px solid var(--secundario);
+    border: 2px solid var(--secundario);
 }
 
 .tarjeta-producto img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 10px;
     margin-bottom: 15px;
 }
 
 .tarjeta-producto h3 {
     font-weight: 800;
-    font-size: 1.3rem;
-    color: var(--texto-oscuro);
+    font-size: 1.2rem;
 }
 
 .precio {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--acento);
     font-weight: 900;
     margin: 10px 0;
@@ -303,7 +269,7 @@ footer {
     display: none; 
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.85); 
+    background-color: rgba(0,0,0,0.8); 
     z-index: 1000;
     justify-content: center;
     align-items: center;
@@ -315,24 +281,22 @@ footer {
     background: white;
     padding: 30px;
     border-radius: 20px;
-    max-width: 450px;
+    max-width: 400px;
     width: 90%;
     text-align: center;
     position: relative;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
 }
 
 .contenido-modal img {
     width: 100%;
-    height: 220px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-bottom: 15px;
 }
 
-#modalTitulo { font-weight: 900; font-size: 1.8rem; text-transform: uppercase; }
-#modalPrecio { font-size: 2.2rem; color: var(--acento); font-weight: 900; margin: 10px 0; }
-#modalDescripcion { font-weight: 500; color: #555; }
+#modalTitulo { font-weight: 900; font-size: 1.5rem; text-transform: uppercase; }
+#modalPrecio { font-size: 2rem; color: var(--acento); font-weight: 900; margin: 10px 0; }
 
 .cerrar-modal {
     position: absolute;
@@ -340,10 +304,7 @@ footer {
     font-size: 28px;
     cursor: pointer;
     color: #888;
-    transition: 0.3s;
 }
-
-.cerrar-modal:hover { color: var(--acento); }
 
 .boton-whatsapp {
     display: block;
@@ -354,17 +315,12 @@ footer {
     text-decoration: none;
     font-weight: 800;
     margin-top: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
 }
 
-.boton-whatsapp:hover { 
-    background-color: #1EBE55; 
-    transform: scale(1.05); 
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
-}
+.boton-whatsapp:hover { background-color: #1EBE55; transform: scale(1.05); }
 
 /* =========================================
    DISEÑO DE LA PÁGINA DE CONTACTOS
@@ -383,28 +339,47 @@ footer {
 }
 
 .info-contacto { text-align: left; }
+.info-contacto p { font-size: 1.1rem; margin: 15px 0; color: var(--texto-oscuro); }
 
-.info-contacto p {
-    font-size: 1.1rem;
-    margin: 15px 0;
-    color: var(--texto-oscuro);
-    font-weight: 500;
-}
-
-.redes-sociales {
-    display: flex;
-    gap: 20px;
-    margin-top: 15px;
-}
-
-.redes-sociales a {
-    font-size: 40px; 
-    text-decoration: none;
-    transition: transform 0.3s;
-}
-
-.redes-sociales a:hover { transform: scale(1.15) translateY(-5px); }
+.redes-sociales { display: flex; gap: 20px; margin-top: 15px; }
+.redes-sociales a { font-size: 35px; text-decoration: none; transition: transform 0.3s; }
+.redes-sociales a:hover { transform: scale(1.2); }
 
 .icono-fb { color: #1877F2; }
 .icono-ig { color: #E1306C; }
 .icono-tk { color: #000000; }
+
+/* --- AJUSTES PARA EL BOTON "PIDE AHORA" EN EL MENÚ --- */
+.boton-pide-ahora {
+    background-color: #FFCA28 !important;
+    color: #1A1A1A !important;
+    padding: 10px 25px !important;
+    margin-left: 20px;
+    border-radius: 8px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(255, 202, 40, 0.4) !important;
+    transition: all 0.3s ease !important;
+    display: inline-block !important;
+    border: none !important;
+}
+
+/* Efecto al pasar el mouse a dar clic */
+.boton-pide-ahora:hover,
+.boton-pide-ahora:active {
+    background-color: #FFB300 !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 6px 15px rgba(255, 179, 0, 0.6) !important;
+}
+
+/* Blindaje para que en el celular (Menú abierto) SÍ aparezca un botón */
+@media (max-width: 768px) {
+    .boton-pide-ahora {
+        margin: 20px auto !important;
+        width: 85% !important;
+        text-align: center !important;
+        padding: 15px !important;
+        font-size: 1.2rem !important;
+    }
+}

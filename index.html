@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo Fast Food | Bite & Vibe</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">Bite & Vibe 🍔</div>
+        <a href="index.html" class="logo" style="text-decoration: none;">Bite & Vite 🍔</a>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav id="navMenu">
-            <a href="index.html" class="activo">Inicio</a>
+            <a href="index.html" style="border-bottom: 3px solid var(--acento);">Inicio</a>
             <a href="menu.html">Menú</a>
             <a href="contactos.html">Contactos</a>
-            <a href="menu.html" class="boton-elegante btn-menu-nav">¡Pide Ahora!</a>
+
+            <a href="menu.html" class="boton-pide-ahora">¡Pide Ahora!</a>
         </nav>
     </header>
 
     <section class="contenedor-zoom">
-        <div class="imagen-zoom-fondo fondo-1" style="background-image: lineal-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assents/img/portada.JPG');"></div>
+        <div class="imagen-zoom-fondo" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assents/img/portada.JPG');"></div>
         <div class="texto-parallax">
             <h1>Sabor Explosivo</h1>
             <p>La comida rápida número 1 de la ciudad</p>
@@ -34,7 +38,7 @@
     </section>
 
     <section class="contenedor-zoom">
-        <div class="imagen-zoom-fondo fondo-2" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assents/img/portada_1.jpg');"></div>
+        <div class="imagen-zoom-fondo" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assents/img/portada_1.jpg');"></div>
         <div class="texto-parallax">
             <h2>Ingredientes 100% Frescos</h2>
         </div>
@@ -44,7 +48,7 @@
         <h2>¿Tienes hambre?</h2>
         <p>Explora nuestro menú interactivo, elige tus favoritos y haz tu pedido directamente por WhatsApp en segundos.</p>
         <br>
-        <a href="menu.html" class="boton-elegante">Ver el Menú Completo</a>
+        <a href="menu.html" class="boton-elegante">Ver el Menú</a>
     </section>
 
     <footer>

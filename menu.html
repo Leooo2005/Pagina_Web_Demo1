@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú | Bite & Vibe</title>
+    <title>Demo Fast Food | Bite & Vibe</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="fondo-menu">
 
     <header>
-        <div class="logo">Bite & Vibe 🍔</div>
+        <a href="index.html" class="logo" style="text-decoration: none;">Bite & Vite 🍔</a>
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav id="navMenu">
             <a href="index.html">Inicio</a>
-            <a href="menu.html" class="activo">Menú</a>
+            <a href="menu.html" style="border-bottom: 3px solid var(--acento);">Menú</a>
             <a href="contactos.html">Contactos</a>
-            <a href="menu.html" class="boton-elegante btn-menu-nav">¡Pide Ahora!</a>
+
+            <a href="menu.html" class="boton-pide-ahora">¡Pide Ahora!</a>
         </nav>
     </header>
 
     <section class="contenedor-menu">
-        <h2 class="titulo-menu">Nuestro Menú Estrella</h2>
+        <h2 class="titulo-menu">Nuestro Menú Especial</h2>
         
         <div class="grilla-productos">
             <div class="tarjeta-producto">
@@ -38,6 +42,20 @@
                 <button class="boton-elegante" onclick="abrirModal('Pizza Pepperoni', '12.00', 'assents/img/pizza.jpg', 'Masa artesanal, salsa pomodoro, extra mozzarella y pepperoni premium.')">Ver Detalles</button>
             </div>
             
+            <div class="tarjeta-producto">
+                <img src="assents/img/hamburguesa.jpg" alt="Hamburguesa">
+                <h3>Hamburguesa Doble Smash</h3>
+                <p class="precio">$6.50</p>
+                <button class="boton-elegante" onclick="abrirModal('Hamburguesa Doble Smash', '6.50', 'assents/img/hamburguesa.jpg', 'Doble carne smash, doble queso cheddar derretido, tocino crujiente y nuestra salsa secreta de la casa.')">Ver Detalles</button>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="assents/img/pizza.jpg" alt="Pizza">
+                <h3>Pizza Pepperoni</h3>
+                <p class="precio">$12.00</p>
+                <button class="boton-elegante" onclick="abrirModal('Pizza Pepperoni', '12.00', 'assents/img/pizza.jpg', 'Masa artesanal horneada a la piedra, salsa pomodoro, extra queso mozzarella y pepperoni premium.')">Ver Detalles</button>
+            </div>
+
             <div class="tarjeta-producto">
                 <img src="assents/img/salchipapa.jpg" alt="Salchipapa">
                 <h3>Salchipapa Extrema</h3>
